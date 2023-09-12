@@ -1,5 +1,6 @@
 package org.nhnacademy;
 
+import java.io.*;
 import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +61,20 @@ public class problem2 {
         logger.info("Your initials are {}{}", firstName.charAt(0), secondName.charAt(0));
     }
 
+    public static void number6() {
+        File note = new File("src/main/resources/testdata.txt");
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(note));
+            String name = br.readLine();
+            int score1= Integer.parseInt(br.readLine());
+            int score2= Integer.parseInt(br.readLine());
+            int score3= Integer.parseInt(br.readLine());
+            logger.info("{}의 평균 성적 {}",name,(score1+score2+score3)/3);
+        }catch (IOException e)
+        {
+            logger.info("위치에 파일이 없습니다.");
+        }
+    }
     private static int dice() {
         return (int) (Math.random() * 6) + 1;
     }
