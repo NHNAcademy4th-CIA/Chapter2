@@ -21,8 +21,9 @@ public class problem2 {
     }
 
     public static void number2(){
+        logger.info("이름을 입력하세요. : ");
         String name = scanner.next();
-        logger.info("Hello, {} nice to meet you!",name);
+        logger.info("Hello, {} nice to meet you!",name.toUpperCase());
     }
     public static void number3(){
         logger.info("가지고 있는 쿼터는 얼마인가요? : ");
@@ -45,7 +46,7 @@ public class problem2 {
         eggs%=12;
         logger.info("Your number of eggs is {} gross, {} dozen, and {}",gross,dozen,eggs);
     }
-    private static int dice() {
+        private static int dice() {
         return (int) (Math.random() * 6) + 1;
     }
 
