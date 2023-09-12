@@ -5,8 +5,6 @@ package org.nhnacademy;
  */
 public class AppTest
 {
-    /**
-     * Rigorous Test :-)
-     */
+
 
 }
