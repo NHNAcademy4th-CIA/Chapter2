@@ -25,7 +25,7 @@ class problem2Test {
 
     @Test
     void number4() {
-        Assertions.assertEquals(1342,problem2.number4());
+        Assertions.assertEquals("1342",problem2.number4());
     }
 
     @Test
