@@ -35,6 +35,16 @@ public class problem2 {
         int penny = scanner.nextInt();
         logger.info("당신이 가지고 있는 달러는 ? {} 달러입니다",Money.toDollar(penny,nickel,dime,quarter));
     }
+
+    public static void number4(){
+        logger.info("몇개의 계란을 가지고 있습니까? : ");
+        int eggs = scanner.nextInt();
+        int gross = eggs/144;
+        eggs%=144;
+        int dozen = eggs/12;
+        eggs%=12;
+        logger.info("Your number of eggs is {} gross, {} dozen, and {}",gross,dozen,eggs);
+    }
     private static int dice() {
         return (int) (Math.random() * 6) + 1;
     }
