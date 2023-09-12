@@ -16,6 +16,6 @@ public class App
         problem2.number2();
         problem2.number3();
         problem2.number4();
-//        problem2.number5();
+        problem2.number5();
     }
 }
