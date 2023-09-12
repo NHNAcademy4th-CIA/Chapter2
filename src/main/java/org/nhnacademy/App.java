@@ -14,5 +14,6 @@ public class App
     {
         problem2.number1();
         problem2.number2();
+        problem2.number3();
     }
 }
