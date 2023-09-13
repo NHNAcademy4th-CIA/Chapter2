@@ -13,7 +13,6 @@ public class Exercise5 {
         int dozen = total / 12;
         total-=dozen*Eggs.DOZEN.number;
         int left = total;
-
         System.out.println("your number of eggs is " + gross + " gross, " + dozen + ", and " + left);
     }
 }
