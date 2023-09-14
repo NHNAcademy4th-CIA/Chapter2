@@ -113,3 +113,6 @@ public class Main{
         System.out.printf("%.3f", sum);
     }
 }
+for(2)
+abc abc abc
+abc abc abc

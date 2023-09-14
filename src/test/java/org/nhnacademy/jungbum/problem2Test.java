@@ -1,10 +1,9 @@
-package org.nhnacademy;
-
-import static org.junit.jupiter.api.Assertions.*;
+package org.nhnacademy.jungbum;
 
 import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.nhnacademy.jungbum.problem2;
 
 class problem2Test {
 
