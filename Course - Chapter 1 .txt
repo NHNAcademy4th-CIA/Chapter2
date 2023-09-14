@@ -1,0 +1,254 @@
+프로그램 = 단순히 컴퓨터가 기계적으로 따라야 하는 명학한 명령 목록.
+
+각 종류의 컴퓨터에는 고유한 기계어가 있으며 프로그램이 해당 언어로
+표현되어야만 컴퓨터가 프로그램을 직접 실행할 수 있습니다.
+(다른 언어로 작성된 것도 기계어로 번역하면 실행 가능)
+
+CPU가 프로그램을 실행할 때 프로그램은 주 메모리(RAM)에 저장됨.
+CPU는 Arithmetic Logic Unit가짐 , 또 작은 메모리인 register 가짐 
+
+가장 중요한건 Program Counter
+Program Counter에 다음 명령어의 메모리 주소를 저장함
+
+기계어 명렁어는 2진수로 표현 됨 .
+
+encoding(암호화)= 컴퓨터가 이해 할 수 있게 2진수로 넘겨주는 거
+엄밀히는 암호화를 의미함 , 상대만 알아들을수 있게 말하고싶어 
+-> encoding 해서 말하면 돼 , (특정 규칙이나 규약에따라 형태를 바꾸는 것)
+
+decoding(복호화) = 사람이 이해 할 수 있게 2진수 -> 사람의 언어로 
+
+각 메모리 위치에 1바이트로 저장한다 , 8bit 
+실제로 cpu가 명령어 읽을떄는 4~8바이트씩 읽는다
+32bit , 64bit 컴퓨터 있는 것
+ 
+
+Asynchronous Events: Polling Loops and Interrupts
+
+Polling - 폴링은 리얼타임 웹을 위한 기법으로, 
+일정한 주기(특정한 시간)을 가지고 서버와 응답을 주고 받는 방식을 말한다. 
+
+Loop()문 내에서 반복적으로 외부 입력을 감시하는 문법으로 구현된다.
+
+우리 키보드 마우스 이런 Input장치들 있잖아
+CPU가 우리가 언제 입력할지 어떻게 알아
+
+가장 쉬운 방법은 CPU가 계속 체크하는거야 , 입력하나 안하나 
+이것만 보면 됨
+
+근데 이거 너무 비효율적이지 , 입력 언제할줄 알고 기다려
+
+따라서  -> Interrupts를 사용해 그냥 납치해 가는거야
+
+CPU가 다른거 하고있다가도 내가 입력하면 Interrupts 가 납치해가서
+Interrupts신호를 수행하게끔 만들어 
+
+이렇게 납치 당한다음에 다시 원래 작업으로 돌아갈수 있게끔
+Program Counter 에 메모리번지 저장시키고 간다.
+
+이러한 것을 Interrupts handler 라고도 해
+
+따라서 Interrputs 쓰면 비동기처리 가능해 Asynchronous 한 작업 처리 가능
+우리가 알다시피 컴퓨터는 프로세스 또는 스레드로 작업을 실행합니다. 예를 들어  a = 2 라는 자원이 있다고 해보겠습니다.
+
+P1이라는 프로세스는 a라는 값을 이용해서 어떠한 로직을 수행합니다.
+그런데 만약 그 사이 P2라는 프로세스가 a의 값을 으로 바꾸게 된다면 어떻게 될까요?
+아마 프로그램은 우리가 원하는 형태의 값을 반환하지 않을 것입니다.
+
+이게 비동기화 일떄 생기는 문제점임
+
+이렇게 두개이상의 프로세스 or 스레드가 동기화없이 접근하려는 것을
+Race Condition이라 하고 , 이걸 해결하기위해 = 즉 서로가 알고있는 정보를
+일치시키는 것이 synchronization 이라 함.
+
+이 방법으로 Critical Section 을 둔다 (임계영역)
+여기에는 반드시 하나의 프로세스 or 스레드만 진입 가능함
+
+멀티테스킹의 가장 대표적인 예시가 
+시계의 초는 계속해서 올라가는데 , 입력도받고 , 동영상도 나옴 
+
+CPU가 수행하는 개별 작업을 스레드or 프로세스라고 함 
+
+
+
+The Java Virtual Machine
+
+프로그래밍언어 -> 컴파일러거쳐서 > 기계어로 (101010010)
+
+컴파일에는 2가지 존재 
+
+프로그램을 한꺼번에 번역하는 Compiler 컴파일러
+필요에 따라 명령어별로 번역하는 Interpreter 인터프리터
+
+컴파일러 = 영어책 -> 한국어판으로 번역 (아예 통으로 새 책만듦)
+인터프리터 = 통역사 ->  필요에따라 번역 
+
+자바는 컴파일하면 바이트코드파일 만들어짐 -> 이거는 어디에서든 돌아감
+
+
+Fundamental Building Blocks of Programs
+
+Routine = 특정한 일을 하기 위한 처리 과정
+
+Sub Routine = 특정한 연산들의 집합
+
+void go(){
+	gogo();
+}
+
+void gogo(){
+}
+
+Control Structure = 제어구조 
+
+제어 흐름을 변경할 수 있는 특수 명령
+
+크게 2가지 명령있음
+
+loop (for while)
+if-else 
+
+
+Objects and Object-oriented Programming
+
+
+Module = 프로그램을 구성하는 구성 요소로, 관련된 데이터와 함수를 하나로 묶은 단위
+
+핵심은 polymorphism (다형성임)
+3가지 , Overloading , SubTyping , Generic Programing 
+
+자바에서 GUI 구성 세트
+
+AWT ( Abstract Windowing Tollkit )
+Swing 
+JavaFx 
+
+존재 시간순으로 AWT -> Swing -> JavaFx
+
+
+The Internet and Beyond
+
+인터넷 통신을 위해 프로토콜 존재 
+프로토콜 : 상호작용을 위한 특정 규약 
+인간으로 치면 ex) 영어 
+
+가장 대표적으로 TCP (Transmission Control Protocol)
+UDP
+SMTP
+HTTP
+
+웹 브라우저는 HTTP 프로토콜 사용 (HyperText Transfer Protocol)
+
+인터넷을 통한 모든 통신은 패킷 형태 
+
+패킷 : 다른 컴퓨터로 보내고싶은 데이터 + 인터넷에서 어디로 가야하는지
+나타내는 주소 정보 
+
+패킷 외부에는 주소가있고 내부에는 메시지가 있는 봉투라고 생각하자 
+
+우리는 고유한 IP주소를 가짐 
+
+또 서버의 경우 DNS (Domain Name System)를 가져서 이름으로도 찾아갈수 있음 
+
+
+
+1번 문제
+One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?
+
+CPU (central Process Unit) 란
+프로그램이 가지고 있는 명령어를 실행하는 장치입니다.
+CPU가 프로그램을 실행할 때 프로그램은 컴퓨터의 RAM에 저장됩니다.
+
+CPU는 사칙연산을 위한 ALU , 다음 명령의 메모리 주소를 가지는 Program Counter , 작은 메모리 장치인 레지스토를 가집니다.
+
+2번 문제
+Explain what is meant by an "asynchronous event." Give some examples.
+
+동기란 서로가 알고있는 정보를 일치시키는 것입니다.
+
+비동기란 서로가 알고있는 정보가 일치하는지 여부를 확신할수 없는 것을 의미합니다.
+
+만약 멀티스레드 환경에서 A라는 변수에 대한 연산을 동시에 여러군대서 진행한다면
+A라는 변수의 값이 실시간으로 변해 똑같은 결과를 나타내지 못할 것입니다.
+
+따라서 이런 경우에 Critical Section 을 두어 한번에 하나의 프로세스 or 스레드만 접근 가능하도록 만들면
+무넺가 해결 가능합니다.
+
+
+3번 문제
+What is the difference between a "compiler" and an "interpreter"?
+
+컴파일러는 소스코드를 한번에 통으로 컴파일합니다.
+
+반면 인터프리터는 필요에 따라 명령어별로 컴파일 합니다.
+
+
+4번 문제
+Explain the difference between high-level languages and machine language.
+
+high - level 언어란 사람이 알아볼수 있도록 특정 언어의 문법으로 쓰인 코드를 의미합니다.
+예를들어 C , C++ , JAVA 등이 있습니다.
+
+Machine language 란 기계어로 컴퓨터가 알아 들을수 있는 1010101 이진법으로 이루어진 데이터를 의미합니다.
+
+
+5번 문제
+If you have the source code for a Java program, and you want to run that program,
+you will need both a compiler and an interpreter. What does the Java compiler do,
+and what does the Java interpreter do?
+
+기존의 자바에서는 컴파일하여 바이트코드 파일을 만듭니다.
+이 과정에서 사용되는 것은 컴파일러 입니다.
+
+그리고 바이트코드 파일을 어느 운영체제,CPU 에서도 돌아갈수 있게끔 인터프리터를 사용해
+프로그램을 실행합니다.
+
+6번 문제
+
+What is a SubRoutine?
+
+SubRoutine 란 특정한 연산들의 집합을 의미합니다.
+어떠한 객체가 가지고 있는 메서드 = Built - in SubRoutine
+
+상태가 변화하거나 출력하는 , 값을 변경하는 메서드 또한 SubRoutine에 속합니다.
+
+
+7번 문제
+Java is an object-oriented programming language. What is an object?
+
+
+Object란 특정한 연산을 하기 위해 정의한 타입을 사용하기 위한 것으로
+객체 생성을 하면 그 타입이 가지고있는 모든 연산과 필드변수등을 사용 가능합니다.
+
+8번 문제
+
+What is a variable? (There are four different ideas associated with variables in Java.
+Try to mention all four aspects in your answer. Hint: One of the aspects is the variable's name.)
+
+Identifier - 이름
+Type
+값
+메모리 위치
+
+
+
+9번 문제
+Java is a "platform-independent language." What does this mean?
+
+자바는 컴파일시 바이트코드 파일이 만들어지고 이 바이트코드 파일을 JVM을 통해서 실행시킵니다.
+따라서 어느 CPU를 사용해도 , JVM이라는 공통된 구동머신을 가지기 때문에 플렛폼에 구애받지 않습니다.
+
+
+10번 문제
+What is the "Internet"? Give some examples of how it is used. (What kind of services does it provide?)
+
+인터넷이란 서로 다른 네트워크 망이 연결되어 데이터를 주고 받을수 있게끔 하는 시스템입니다.
+따라서 서로 메시지를 주고 받거나 , 서버로 부터 값을 요청해 받아오는 등 의 역할수행이 가능합니다.
+
+
+
+
+
+
+
+
