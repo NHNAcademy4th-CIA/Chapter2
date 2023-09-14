@@ -15,18 +15,21 @@ public class Problem7 {
 
     public static void main(String[] args) throws IOException {
 
-
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(
-                "src/main/resources/testdata.txt"));
-
+        BufferedReader bufferedReader;
         String str;
         double avg = 0;
 
-        while ((str = bufferedReader.readLine()) != null) {
-            logger.info(str);
-            if (Pattern.matches(regex, str)) {
-                avg += Double.parseDouble(str);
+        try{
+            bufferedReader = new BufferedReader(new FileReader(
+                    "src/main/resources/testdata.txt"));
+            while ((str = bufferedReader.readLine()) != null) {
+                logger.info(str);
+                if (Pattern.matches(regex, str)) {
+                    avg += Double.parseDouble(str);
+                }
             }
+        }catch (IOException e){
+            logger.info("파일이 존재하지 않습니다 !");
         }
 
         logger.info("{}", avg / 3);
