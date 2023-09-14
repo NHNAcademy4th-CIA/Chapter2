@@ -10,6 +10,8 @@ public class Problem5 {
 
     public static final Logger logger = LoggerFactory.getLogger(Problem5.class);
 
+    public static final  int gross = 144;
+    public static final  int dozen = 12;
 
     public static void main(String[] args) {
 
@@ -23,12 +25,14 @@ public class Problem5 {
         List<Integer> answer = new ArrayList<>();
 
 
-        int[] arr = {144, 12, 1};
 
 
-        for (int i = 0; i < arr.length; i++) {
-            answer.add(totalEgg / arr[i]);
-            totalEgg %= arr[i];
+        int[] eggUnit = {gross, dozen, 1};
+
+
+        for (int i = 0; i < eggUnit.length; i++) {
+            answer.add(totalEgg / eggUnit[i]);
+            totalEgg %= eggUnit[i];
         }
 
         StringBuilder sb = new StringBuilder();
@@ -37,7 +41,7 @@ public class Problem5 {
                 .append(answer.get(1) + " dozen,")
                 .append(" and " + answer.get(2));
 
-        System.out.println(sb);
+        logger.info("{}",sb);
 
     }
 
