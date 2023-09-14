@@ -1,4 +1,4 @@
-package org.nhnacademy;
+package org.nhnacademy.jmj;
 
 import org.nhnacademy.textio.TextIO;
 
