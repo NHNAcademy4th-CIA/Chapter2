@@ -1,4 +1,4 @@
-package org.nhnacademy;
+package org.nhnacademy.jmj;
 
 import java.util.Scanner;
 
@@ -9,9 +9,9 @@ public class Exercise5 {
         System.out.println("how many eggs you have");
         int total = scanner.nextInt();
         int gross = total / Eggs.GROSS.number;
-        total -= gross*Eggs.GROSS.number;
+        total %= gross*Eggs.GROSS.number;
         int dozen = total / 12;
-        total-=dozen*Eggs.DOZEN.number;
+        total%=dozen*Eggs.DOZEN.number;
         int left = total;
         System.out.println("your number of eggs is " + gross + " gross, " + dozen + ", and " + left);
     }

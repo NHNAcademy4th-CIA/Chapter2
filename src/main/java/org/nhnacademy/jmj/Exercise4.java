@@ -1,4 +1,4 @@
-package org.nhnacademy;
+package org.nhnacademy.jmj;
 
 import java.util.Scanner;
 
@@ -13,15 +13,19 @@ public class Exercise4 {
         double dollars = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("how many quarters");
-        dollars += scanner.nextDouble() * 0.25;
+        double quarter = scanner.nextDouble();
         System.out.println("how many dimes");
-        dollars += scanner.nextDouble() * 0.10;
+        double dime = scanner.nextDouble();
         System.out.println("how many nickels");
-        dollars += scanner.nextDouble() * 0.05;
+        double nickel = scanner.nextDouble();
         System.out.println("how many pennies");
-        dollars += scanner.nextDouble() * 0.01;
+        double penny = scanner.nextDouble();
 
         // in dollars
-        System.out.println("you have : $" + dollars);
+        System.out.println("you have : $" + toDollar(quarter, dime, nickel, penny));
+    }
+
+    private static double toDollar(double quarter, double dime, double nickel, double penny) {
+        return quarter * 0.25 + dime * 0.10 + nickel * 0.05 + penny * 0.01;
     }
 }
