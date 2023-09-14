@@ -11,13 +11,15 @@ public class Problem4 {
 
     public static void main(String[] args) {
 
-        // 쿼터 다임 니켈 페니
-        // 25 10   5  1
+        printUserMoneny();
 
+    }
+
+    public static void printUserMoneny(){
         Scanner sc = new Scanner(System.in);
 
+        double result = 0;
 
-        int result = 0;
         for (Money a : Money.values()) {
 
             logger.info("How Many you have {} ?", a);
@@ -27,10 +29,10 @@ public class Problem4 {
             result += num * a.getValue();
         }
 
-        logger.info("User Total Money {}", result);
-
-
+        logger.info("User Total Money {}", result/100);
     }
+
+
 
 }
 
@@ -47,7 +49,7 @@ enum Money {
 
     private final int value;
 
-    Money(int value) {
+    private Money(int value) {
         this.value = value;
     }
 
