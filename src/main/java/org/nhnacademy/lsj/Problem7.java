@@ -1,4 +1,4 @@
-package org.nhnacademy;
+package org.nhnacademy.lsj;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
