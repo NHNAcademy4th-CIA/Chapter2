@@ -14,6 +14,8 @@ public class Problem3 {
         logger.info("사용자 이름을 입력해 주세요");
         String userName = sc.next();
 
+        userName=userName.toUpperCase();
+
         logger.info("Hello, {}, 만나서 반가워요!", userName);
     }
 }
