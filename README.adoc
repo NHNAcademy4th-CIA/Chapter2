@@ -38,9 +38,6 @@ Interrupt 를 예시로 든다면
 
 ====
 
-== Chapter 2 Quiz
-
-
 
 * Question 6: What is a subroutine?
 
@@ -75,6 +72,8 @@ What is an object?
 
 
 ---
+
+== Chapter 2 Quiz
 
 
 
