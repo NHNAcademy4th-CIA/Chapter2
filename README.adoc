@@ -1,0 +1,58 @@
+= Chapter 1,2
+
+
+=== Chapter1 Has No Excerise Problem
+
+=== link:https://math.hws.edu/javanotes/c2/exercises.html[Programing Exercise For Chapter 2]
+
+
+* Chapter 1 Quiz
+
+====
+Question 2: Explain what is meant by an "asynchronous event." Give some examples.
+
+Answer:
+====
+
+
+====
+Question 3:
+
+What is the difference between a "compiler" and an "interpreter"?
+
+====
+
+
+====
+
+Question 5:
+
+If you have the source code for a Java program, and you want to run that program, you will need both a compiler and an interpreter. What does the Java compiler do, and what does the Java interpreter do?
+====
+
+
+====
+
+Question 6:
+
+What is a subroutine?
+====
+
+
+====
+
+Question 7:
+
+Java is an object-oriented programming language. What is an object?
+====
+
+
+====
+
+Question 8:
+
+What is a variable? (There are four different ideas associated with variables in Java. Try to mention all four aspects in your answer. Hint: One of the aspects is the variable's name.)
+
+====
+
+
