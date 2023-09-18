@@ -1,58 +1,115 @@
 = Chapter 1,2
 
-
 === Chapter1 Has No Excerise Problem
 
 === link:https://math.hws.edu/javanotes/c2/exercises.html[Programing Exercise For Chapter 2]
 
+* Question 2: Explain what is meant by an "asynchronous event." Give some examples.
 
-* Chapter 1 Quiz
-
-====
-Question 2: Explain what is meant by an "asynchronous event." Give some examples.
-
-Answer:
+.Answer
+[%collapsible%open]
 ====
 
+CPU는 기본적으로 연산을 순차적으로 수행을 합니다 또한 기본적으로 하나의 일만 수행 가능하기 떄문에 작업에 대한 polling을 유지해야 합니다.
 
-====
-Question 3:
+polling이란 특정한 작업을 계속해서 수행 하면서 주기적으로 다른 이벤트의 발생을 묻는 것 입니다.
+이러한 상태를 동기 상태라고 합니다.
 
-What is the difference between a "compiler" and an "interpreter"?
+반대로 비동기란 주로 인터럽트를 활용한 이벤트로 구현이 되며
 
-====
+polling과 다르게 내가 이벤트의 발생을 물어볼 책임이 존재하지 않습니다.
 
+따라서 작업의 순서가 순차적이지 않습니다.
 
-====
+polling 를 예시로 든다면
+주방장이 요리를 하면서 계속해서 손님이 왔는지 확인하는 형식입니다
+확인하는 주기가 굉장히 짧아야하고 적시에 알 수 없음으로 효울성이 떨어집니다.
 
-Question 5:
-
-If you have the source code for a Java program, and you want to run that program, you will need both a compiler and an interpreter. What does the Java compiler do, and what does the Java interpreter do?
-====
-
+Interrupt 를 예시로 든다면
+주방장은 주방에서 요리만 계속 하고 알바가(IO Driver) 손님이 왔을때 바로 바로 알려주는 형식입니다.
 
 ====
 
-Question 6:
 
-What is a subroutine?
+
+* Question 6: What is a subroutine?
+
+.Answer
+[%collapsible%open]
+====
+서브루틴은 클래스에 속합니다. 그 클래스 안에서 {}로 묶인 모든 것을 의미합니다 +
+{} 안에서 특정한 연산이나 작업을 실행하며  안에 있는 모든 변수 메서드 는 서브루틴의 일부이며 +
+서브루틴의 범위는 {}의 스코프 범위와 같습니다.
 ====
 
 
+
+* Question 7: Java is an object-oriented programming language. +
+What is an object?
+
+.Answer
+[%collapsible%open]
 ====
 
-Question 7:
+클래스라는 틀을 사용하기 위한 것입니다. +
+오브젝트는 해당 클래스의 비정적 변수와 비정적 메서드를 가지며 +
+클래스로부터 실제로 생성된 데이터를 가집니다. +
 
-Java is an object-oriented programming language. What is an object?
+
+인스턴스는 오브젝트의 속하며 +
+만약 class A , B ,C 에서 오브젝트를 만든다면
+
+각각은 A,B,C의 인스턴스로 볼 수 있고 +
+객체라고 묶어서 부를 수 있다
 ====
 
 
+---
+
+
+
+* Question 1: Briefly explain what is meant by the syntax and the semantics of a programming language. +
+Give an example to illustrate the difference between a syntax error and a semantics error.
+
+.Answer
+[%collapsible%open]
+====
+Syntax는 언어의 문법을 의미합니다. 따라서 Syntax Error가 존재합니다. +
+
+Semantics 문법상으로는 문제가 없지만 코드가 유효한지를 나타냅니다.
+
+Ex)
+
+while(true){
+    이 코드는 문법상으로는 올바르지만 유효하게 동작하진 않습니다. +
+}
+
 ====
 
-Question 8:
 
-What is a variable? (There are four different ideas associated with variables in Java. Try to mention all four aspects in your answer. Hint: One of the aspects is the variable's name.)
 
+* Question 3: What is a type, as this term relates to programming?
+
+.Answer
+[%collapsible%open]
 ====
+type = 특정한 연산을 갖고 있는 집합을 정의 내린 것을 의미합니다. +
+====
+
+* Question 8: What is a literal?
+
+.Answer
+[%collapsible%open]
+====
+literal이란 값 그 자체를 의미합니다.
+
+Constant(상수)와는 다른 개념으로 특정한 의미를 가지 않고 +
+값의 재정의또한 가능하며 , 변수가 가진 값 그 자체를 의미합니다.
+====
+
+
+
+
+
 
 
