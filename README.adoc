@@ -4,7 +4,8 @@
 
 === link:https://math.hws.edu/javanotes/c2/exercises.html[Programing Exercise For Chapter 2]
 
-* Question 2: Explain what is meant by an "asynchronous event." Give some examples.
+=== link:https://math.hws.edu/javanotes/c2/quiz.html[ Quiz on Chapter 2]
+
 
 ---
 
@@ -13,6 +14,7 @@
 == Chapter 1 Quiz
 
 
+* Question 2: Explain what is meant by an "asynchronous event." Give some examples.
 
 .Answer
 [%collapsible%open]
